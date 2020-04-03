@@ -21,7 +21,7 @@ It's based on __DesktopContainers/base-debian__
 ### Simple SSH X11 Forwarding
 
 Since it is an X11 GUI software, usage is in two steps:  
-  1.b Run a background container as server or start existing one.
+#### 1.a Run a background container as server or start existing one.
 
 ```
 docker start jap || docker run -d --name jap \
@@ -29,7 +29,7 @@ docker start jap || docker run -d --name jap \
 -e 'WEB_URL_JAVA_EXCEPTION=https://my-trusted-client/'
 sysincz/java-applet-player:v2.0
 ```
-  1.b Run directly X11
+#### 1.b Run directly X11
    ```
 xhost +local:jap
 docker run -it --rm --name jap \
@@ -40,7 +40,7 @@ docker run -it --rm --name jap \
 sysincz/java-applet-player:v2.0
 ```
 
-  2. Connect to the server using `ssh -X` (as many times you want).
+#### 2. Connect to the server using `ssh -X` (as many times you want).
      _Logging in with `ssh` automatically opens a firefox window_
 
 ```
@@ -48,6 +48,6 @@ ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
 -X app@$(docker inspect --format '{{ .NetworkSettings.IPAddress }}' jap)
 ```
 
-  3. Browse to your Java Applet providing server, start the client and enjoy.
+#### 3. Browse to your Java Applet providing server, start the client and enjoy.
 
 You can configure firefox and set bookmarks. As long as you don't remove the container and you reuse the same container, all your changes persist. You could also tag and push your configuration to a registry to backup (should be your own private registry for your privacy).
