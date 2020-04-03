@@ -1,6 +1,5 @@
 BINARY = java-applet-player
 GITHUB_USERNAME=sysincz
-GITHUB_USERNAME
 VERSION?=latest
 COMMIT=$(shell git rev-parse --short HEAD)
 BRANCH=$(shell git rev-parse --abbrev-ref HEAD)
