@@ -20,7 +20,7 @@ It's based on __DesktopContainers/base-debian__
 
 ### Simple SSH X11 Forwarding
 
-Since it is an X11 GUI software, usage is in two steps:
+Since it is an X11 GUI software, usage is in two steps:  
   1.b Run a background container as server or start existing one.
 
 ```
