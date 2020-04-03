@@ -7,11 +7,8 @@ ENV JAVA_HOME=/opt/jdk1.8.0_121
 ENV JRE_HOME=/opt/jdk1.8.0_121/jre
 ENV PATH=$PATH:/opt/jdk1.8.0_121/bin:/opt/jdk1.8.0_121/jre/bin
 
-ADD https://files-cdn.liferay.com/mirrors/download.oracle.com/otn-pub/java/jdk/8u121-b13/jdk-8u121-linux-x64.tar.gz /tmp/
+ADD https://files-cdn.liferay.com/mirrors/download.oracle.com/otn-pub/java/jdk/8u121-b13/jdk-8u121-linux-x64.tar.gz /opt/
 #ADD /jdk-8u121-linux-x64.tar.gz /opt/
-# ADD /exception.sites /root/.java/deployment/security/
-# ADD /exception.sites /home/app/.java/deployment/security/
-# RUN chown -R app:app /home/app/.java
 
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
  && update-alternatives --install /usr/lib/mozilla/plugins/libjavaplugin.so mozilla-javaplugin.so $JAVA_HOME/jre/lib/amd64/libnpjp2.so 1 \
