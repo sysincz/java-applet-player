@@ -8,6 +8,7 @@ ENV JRE_HOME=/opt/jdk1.8.0_121/jre
 ENV PATH=$PATH:/opt/jdk1.8.0_121/bin:/opt/jdk1.8.0_121/jre/bin
 
 ADD https://files-cdn.liferay.com/mirrors/download.oracle.com/otn-pub/java/jdk/8u121-b13/jdk-8u121-linux-x64.tar.gz /opt/
+RUN ls -lrta /opt/
 #ADD /jdk-8u121-linux-x64.tar.gz /opt/
 
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
