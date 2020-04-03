@@ -19,7 +19,7 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 
 
 RUN echo "#!/bin/bash  " > /usr/local/bin/ssh-app.sh \
- && echo "mkdir -p $HOME/.java/deployment/security/"  >> /usr/local/bin/ssh-app.sh \
- && echo "echo \"\$WEB_URL_JAVA_EXCEPTION\" > $HOME/.java/deployment/security/exception.sites"  >> /usr/local/bin/ssh-app.sh \
+ && echo "mkdir -p \$HOME/.java/deployment/security/"  >> /usr/local/bin/ssh-app.sh \
+ && echo "echo \"\$WEB_URL_JAVA_EXCEPTION\" > \$HOME/.java/deployment/security/exception.sites"  >> /usr/local/bin/ssh-app.sh \
  && echo "kill \$(pidof firefox-esr) 2>/dev/null" >> /usr/local/bin/ssh-app.sh \
  && echo "firefox --new-instance \$WEB_URL\n" >> /usr/local/bin/ssh-app.sh 

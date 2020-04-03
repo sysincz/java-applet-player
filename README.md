@@ -27,7 +27,7 @@ Since it is an X11 GUI software, usage is in two steps:
 docker start jap || docker run -d --name jap \
 -e 'WEB_URL=https://my-trusted-client/' \
 -e 'WEB_URL_JAVA_EXCEPTION=https://my-trusted-client/'
-sysincz/java-applet-player:v2.0
+sysincz/java-applet-player:v2.1
 ```
 #### 1.b Run directly X11
    ```
@@ -37,7 +37,7 @@ docker run -it --rm --name jap \
 -e "DISPLAY=${DISPLAY}" --entrypoint /usr/local/bin/ssh-app.sh -v "/tmp/.X11-unix:/tmp/.X11-unix" \
 -e 'WEB_URL=https://my-trusted-client/' \
 -e 'WEB_URL_JAVA_EXCEPTION=https://my-trusted-client/'
-sysincz/java-applet-player:v2.0
+sysincz/java-applet-player:v2.1
 ```
 
 #### 2. Connect to the server using `ssh -X` (as many times you want).
